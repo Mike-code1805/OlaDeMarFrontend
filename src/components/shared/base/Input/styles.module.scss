@@ -1,0 +1,83 @@
+@import '/src/scss/global';
+
+.input {
+  display: flex;
+  margin-bottom: 2rem;
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: rgba($purple-dark, .1);
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    margin-right: 1.5rem;
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: $black;
+    position: relative;
+    
+    &::after {
+      display: block;
+      content: '';
+      width: 95%;
+      height: 2px;
+      margin: 0 auto;
+      background-color: rgba($gray-light, .16);
+    }
+  }
+
+  &__label {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .75rem;
+    line-height: 1.5rem;
+    margin-bottom: .25rem;
+    letter-spacing: 0.0625rem;
+  }
+
+  &__value {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 400;
+    color: $gray-dark;
+    background: transparent;
+    margin-bottom: .5rem;
+    border: none;
+
+    &:focus, 
+    &:active,
+    &:-webkit-autofill {
+      background-color: transparent;
+      outline: none;
+      border: none;
+    }
+  }
+
+  &__toggle {
+    border: none;
+    background: transparent;
+    position: absolute;
+    bottom: .62rem;
+    right: .2rem;
+    font-weight: 700;
+    border-radius: .5rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($purple-dark, .1);
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba($purple-dark, .2);
+    }
+  }
+}

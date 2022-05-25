@@ -1,0 +1,60 @@
+@import 'src/scss/global';
+
+@mixin showAuthButtonElements {
+  .AuthButton {
+    &__text {
+      display: block;
+    }
+    &__arrow {
+      display: block;
+    }
+  }
+}
+
+.AuthButton {
+  display: flex;
+
+  &__button {
+    width: fit-content;
+    border: none;
+    background: transparent;
+    margin: 0 auto 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: $yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    display: none;
+    color: $black;
+    font-weight: 700;
+    padding: 0 1rem;
+    width: 150px;
+    font-size: 1rem;
+  }
+
+  &__arrow {
+    display: none;
+    flex-shrink: 0;
+  }
+
+  &--open {
+    @include showAuthButtonElements;
+  }
+
+  @include breakpoint(lg) {
+    @include showAuthButtonElements;
+  }
+}

@@ -1,0 +1,18 @@
+@import '/src/scss/global';
+
+.HomeLayout {
+  display: flex;
+  &__content {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  @include breakpoint(md) {
+    &__content {
+      padding: 0 2rem;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import '/src/scss/global';
+
+.recover-form {
+  &__input {
+    margin-bottom: 3rem;
+  }
+  &__button {
+    margin-bottom: 1.5rem;
+  }
+
+  @include breakpoint(lg) {
+    max-width: 500px;
+  }
+}

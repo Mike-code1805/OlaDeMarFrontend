@@ -1,0 +1,47 @@
+@import 'src/scss/global';
+
+.FoodHubLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0 3rem;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-shadow: 3px 3px 5px $gray-dark;
+    display: none;
+  }
+
+  &--open {
+    .FoodHubLogo {
+      &__logo {
+        margin-right: .5rem;
+      }
+
+      &__title {
+        display: initial;
+      }
+    }
+  }
+
+  @include breakpoint(lg) {
+    margin-right: .5rem;
+    padding: 1rem 0 2rem;
+
+    &__logo {
+      margin-right: .5rem;
+    }
+
+    &__title {
+      display: initial;
+      font-size: 1.8rem;
+    }
+  }
+}

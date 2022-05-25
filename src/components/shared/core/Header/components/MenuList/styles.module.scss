@@ -1,0 +1,24 @@
+@import 'src/scss/global';
+
+.MenuList {
+  width: 100%;
+  position: absolute;
+  top: 7rem;
+  left: 0;
+
+  &__content {
+    width: 100%;
+    height: calc(100vh - 7rem);
+    background: white;
+  }
+
+  @include breakpoint(lg) {
+    position: relative;
+    top: 0;
+
+    &__content {
+      height: 3rem;
+      background: transparent;
+    }
+  }
+}

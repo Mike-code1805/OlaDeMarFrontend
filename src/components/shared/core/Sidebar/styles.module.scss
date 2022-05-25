@@ -1,0 +1,55 @@
+@import 'src/scss/global';
+
+.Sidebar {
+  width: 7rem;
+
+  &__content {
+    padding: 0 1rem;
+    max-width: 19rem;
+    min-height: 100vh;
+    background-color: $gray;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 1.5rem 1.5rem 0;
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: auto;
+  }
+  
+  &--open {
+    width: 100vw;
+    flex-shrink: 0;
+    padding-right: 50px;
+    background: rgba(#000000, .25);
+
+    .Sidebar {
+      &__content {
+        padding: 0 1rem;
+      }
+
+      &__list {
+        width: 100%;
+        max-width: 19rem;
+      }
+    }
+  }
+
+  @include breakpoint(md) {
+    &__content {
+      padding: 0 1.75rem;
+    }
+  }
+
+  @include breakpoint(lg) {
+    width: 19rem;
+
+    &--open {
+      padding-right: 0;
+    }
+  }
+}

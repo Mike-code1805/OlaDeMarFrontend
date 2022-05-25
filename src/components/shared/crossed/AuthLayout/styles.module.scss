@@ -1,0 +1,39 @@
+@import '/src/scss/global';
+
+.auth-layout {
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    height: 33vh;
+    background-image: url('/components/assets/images/multiple_foods.jpg');
+    background-position: bottom;
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  &__content {
+    min-height: 67vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+  }
+
+  @include breakpoint(lg) {
+    min-height: 100vh;
+    flex-direction: row;
+    align-items: stretch;
+
+    &__image {
+      width: 33vw;
+      height: auto;
+      border-radius: 0 1rem 1rem 0;
+      background-position: right;
+    }
+
+    &__content {
+      width: 67vw;
+      min-height: 100vh;
+    }
+  }
+}
